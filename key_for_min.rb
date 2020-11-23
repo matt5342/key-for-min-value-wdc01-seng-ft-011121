@@ -3,14 +3,13 @@
 
 def key_for_min_value(name_hash)
 
-  key_for_min_value = :sym
+  key_for_min_value = nil
   num = 10000
   name_hash.each do |key, value|
-    if name_hash[key][value] < num
+    if name_hash != nil && name_hash[key][value] < num
       num = name_hash[key][value]
       key_for_min_value = name_hash[key]
-    elsif name_hash[key][value] == nil
-      key_for_min_value = nil
+ 
     end
   end
   key_for_min_value
